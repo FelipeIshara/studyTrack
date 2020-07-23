@@ -2,14 +2,15 @@ const express = require('express')
 const router = express.Router()
 const User = require("../models/user")
 const bcrypt = require('bcrypt')
+const authenticateFunctions = require("../authenticate-function")
+const checkNotAuthenticated = authenticateFunctions.checkNotAuthenticated
 
-
-router.get('/', (req,res)=>{
+router.get('/', checkNotAuthenticated, (req,res)=>{
     res.render('register')
 })
 
 //requisição de registro
-router.post('/', async (req,res)=>{
+router.post('/', checkNotAuthenticated, async (req,res)=>{
   //hashing password
   try { 
     //verificar se usuário já existe
