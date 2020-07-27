@@ -1,0 +1,23 @@
+<table class="sessionTable">
+    <tr>
+        <th>Date</th>
+        <th>Minutes</th>
+        <th>Description</th>
+        <th>Subject</th>
+        
+    </tr>
+    <% sessions.forEach(session => { %>
+    <tr>
+        <td><%= session.sessionDate.toISOString().split('T')[0] %></td>
+        <td><%= session.minutes %></td>
+        <td style="white-space: pre-line"><%= session.description %></td>
+        <td><%= session.subject %></td>
+    </tr>
+    <% }) %>
+</table>
+
+
+    
+
+
+    

@@ -13,6 +13,9 @@ const passport = require('passport')
 const loginRouter = require('./routes/login')
 const registerRouter = require('./routes/register')
 const indexRouter = require('./routes/index')
+const sessionRouter = require('./routes/session')
+const logoutRouter = require('./routes/logout')
+
 //passport config
 const initializePassport = require('./passport-config.js')
 initializePassport()
@@ -22,6 +25,7 @@ app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/layout')
 app.use(espressLayouts)
+app.use(express.static('public'))
 app.use(express.urlencoded({extended:false}))
 
 //mongoose
@@ -45,9 +49,12 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+//methodOverride
+
 //routes
 app.use('/', indexRouter)
 app.use('/login', loginRouter)
 app.use('/register', registerRouter)
-
+app.use('/session', sessionRouter)
+app.use('/logout', logoutRouter)
 app.listen(3000)

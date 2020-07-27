@@ -1,0 +1,45 @@
+<div class="interface">
+    <div class="title"><h1>Pomodoro Clock</h1></div>
+    <div class="session">
+        <button class="sessionBtn" id="pomodoro">Pomodoro</button>
+        <button class="sessionBtn" id="shortBreak">Short Break</button>
+        <button class="sessionBtn" id="longBreak">Long Break</button>
+    </div>
+        <div class="pomodoro">
+            <div class="clock">
+                <p id ="countdown"></p>
+                <div class="buttons">
+                    <button class="btn" id="start"><i class="far fa-play-circle"></i></button>
+                    <button class="btn" id="reset"><i class="fas fa-history"></i></button>
+                    <button class="btn" id="pause"><i class="far fa-pause-circle"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="settings">
+            <div class="settingField">
+            <label for="Min">Pomodoro Time</label>   
+            <input min="0" value="25" placeholder="Minutes" type="number" name="Min" id="pomodoroTime">
+            </div>
+            <div class="settingField">
+                <label for="Min">Short Break</label>   
+                <input min="1" value="5" placeholder="Minutes" type="number" name="Min" id="shortBreakTime">
+            </div>
+            <div class="settingField">
+                <label for="Min">Long Break</label>   
+                <input min="5" value="10" placeholder="Minutes" type="number" name="Min" id="longBreakTime">
+            </div>
+        </div>
+
+        <form action='/session' method="POST" class="displayNone">
+            <h2>Save your last session</h2>
+            <br>
+            <div>
+                <div><label for="min" >Minutes</label><input name="min" type="number"></div>
+                <div><label for="description">Description</label><textarea name="description"></textarea></div>
+                <div><label for="subject"></label>Subject<input name="subject" type="text"></div>
+                <button id="endSessionBtn" disabled=true >Save session</button>
+            </div>
+        </form>
+</div>   
+

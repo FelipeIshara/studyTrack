@@ -1,0 +1,16 @@
+/*@import 'shared/pomodoro.css';*/
+.displayNone{
+    display: none;
+}
+.displaySessions{
+    display:flex;
+}
+
+.sessionTable{
+    text-align: center;
+}
+
+.sessionTable tr td{
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
