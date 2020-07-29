@@ -2,17 +2,20 @@
     <tr>
         <th>Date</th>
         <th>Minutes</th>
-        <th>Description</th>
+        <!-- <th>Description</th> -->
         <th>Subject</th>
+        <th>Show study session</th>
         
     </tr>
     <% sessions.forEach(session => { %>
-    <tr>
-        <td><%= session.sessionDate.toISOString().split('T')[0] %></td>
-        <td><%= session.minutes %></td>
-        <td style="white-space: pre-line"><%= session.description %></td>
-        <td><%= session.subject %></td>
-    </tr>
+        <tr>
+            <td><%= session.sessionDate.toISOString().split('T')[0] %></td>
+            <td><%= session.minutes %></td>
+            <!-- <td style="white-space: pre-line">/*session.description</td> -->
+            <td><%= session.subject %></td>
+            <td><a href="/session/<%=session.id%>">Show</a></td>
+            
+        </tr>
     <% }) %>
 </table>
 

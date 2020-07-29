@@ -1,0 +1,28 @@
+<table class="sessionTable">
+    <tr>
+        <th>Date</th>
+        <th>Minutes</th>
+        <th>Subject</th>
+        <th>Description</th> 
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    
+        <tr>
+            <td><%= session.sessionDate.toISOString().split('T')[0] %></td>
+            <td><%= session.minutes %></td>
+            <td style="white-space: pre-line"><%=session.description%></td> 
+            <td><%= session.subject %></td>
+            <td><button id="editsessionbtn">Edit</button></td>
+            <td><a href="/session/<%=session.id%>">Delete</a></td>
+        </tr>
+</table>
+<form action="/session/<%=session.id%>?_method=PUT" method="POST" class="displayNone" id="editform">
+    <h2>Edit your last session</h2>
+    <br>
+        <div><label for="min" >Minutes</label><input name="min" type="number" value="<%= session.minutes %>"></div>
+        <div><label for="subject"></label>Subject<input name="subject" type="text" value="<%= session.subject %>"></div>
+        <div><label for="description">Description</label><textarea name="description" value="<%= session.description %>"><%= session.description %></textarea></div>
+        <button type="submit">Save session</button>
+    </div>
+</form>
