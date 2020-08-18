@@ -2,22 +2,28 @@
 <% if (messages.error){%>
   <%= messages.error %>
 <%}%>
+
+<div class="interface">
+  <h1>Welcome to StudyTrack</h1>
 <div class="loginForm">
   <div>
-    <h1>Login</h1>
+    <h2>Login</h2>
   </div>
   <form action="/login" method="POST">
-  <div class="inputField">
-    <label for="username">Username</label>
-    <input class="inputs" placeholder="username" type="text" id="username" name="username" required>
+    <div class="inputField">
+      <label for="username">Username</label>
+      <input class="inputs" placeholder="username" type="text" id="username" name="username" required>
+    </div>
+    <div class="inputField">
+      <label for="password">Password</label>
+      <input class="inputs" type="password" id="password" name="password" required>
+    </div>
+    <div class="loginBtn">
+    <button id="loginBtn" type="submit">Login</button>
+    </div>
+  </form>
+  <div class="registerbtn">
+    <a href="/register">Register</a>
   </div>
-  <div class="inputField">
-    <label for="password">Password</label>
-    <input class="inputs" type="password" id="password" name="password" required>
-  </div>
-  <div>
-  <button id="loginBtn" type="submit">Login</button>
-  </div>
-</form>
-<a href="/register">Register</a>
+</div>
 </div>

@@ -6,9 +6,7 @@
     margin: 0;
 }
 
-:root{
-    background-color: greenyellow;
-}
+
 .displayNone{
     display: none;
 }
