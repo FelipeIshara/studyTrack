@@ -55,4 +55,21 @@ router.put('/:id', async (req,res)=>{
    }
 })
 
+router.delete('/:id', async (req,res) => {
+  let studySession;
+  //query db for session
+  try {
+    studySession = await StudySession.findById(req.params.id)
+    await studySession.remove()
+    res.redirect('/session')
+  } catch{
+    if (studySession === null){
+      res.redirect('/session')
+    }else{
+    res.redirect(`/session/${studySession.id}`)
+    }
+  }
+  
+})
+
 module.exports = router;

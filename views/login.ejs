@@ -1,16 +1,23 @@
-<h1>Login</h1>
+
 <% if (messages.error){%>
   <%= messages.error %>
 <%}%>
-<form action="/login" method="POST">
+<div class="loginForm">
   <div>
-    <label for="username">Usernme</label>
-    <input type="text" id="username" name="username" required>
+    <h1>Login</h1>
   </div>
-  <div>
+  <form action="/login" method="POST">
+  <div class="inputField">
+    <label for="username">Username</label>
+    <input class="inputs" placeholder="username" type="text" id="username" name="username" required>
+  </div>
+  <div class="inputField">
     <label for="password">Password</label>
-    <input type="password" id="password" name="password" required>
+    <input class="inputs" type="password" id="password" name="password" required>
   </div>
+  <div>
   <button id="loginBtn" type="submit">Login</button>
+  </div>
 </form>
 <a href="/register">Register</a>
+</div>

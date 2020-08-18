@@ -18,12 +18,15 @@ const logoutRouter = require('./routes/logout')
 
 //passport config
 const initializePassport = require('./passport-config.js')
+const user = require('./models/user')
 initializePassport()
 
 //layout, view engine configs
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
-app.set('layout', 'layouts/layout')
+app.set('layout', 'layouts/layout', 'layouts/layoutb')
+
+
 app.use(espressLayouts)
 app.use(express.static('public'))
 app.use(express.urlencoded({extended:false}))

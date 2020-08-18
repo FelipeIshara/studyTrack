@@ -1,4 +1,14 @@
-/*@import 'shared/pomodoro.css';*/
+@import 'shared/login.css';
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    background-color: greenyellow;
+}
 .displayNone{
     display: none;
 }
@@ -14,3 +24,4 @@
     padding: 10px;
     border-bottom: 1px solid black;
 }
+

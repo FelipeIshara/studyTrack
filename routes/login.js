@@ -5,7 +5,7 @@ const checkNotAuthenticated = require("../authenticate-function").checkNotAuthen
 
 
 router.get('/', checkNotAuthenticated, (req,res)=>{
-    res.render("login")
+    res.render("login" , {layout: "layouts/layoutb"})
 })
 
 router.post('/', checkNotAuthenticated, passport.authenticate('local', {

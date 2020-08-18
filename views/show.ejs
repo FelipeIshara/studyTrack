@@ -14,7 +14,11 @@
             <td style="white-space: pre-line"><%=session.description%></td> 
             <td><%= session.subject %></td>
             <td><button id="editsessionbtn">Edit</button></td>
-            <td><a href="/session/<%=session.id%>">Delete</a></td>
+            <td>
+                <form action="/session/<%=session.id%>?_method=DELETE" method="POST" id="editform">
+                <button type="submit">Delete</button></td>
+                </form>
+            </td>
         </tr>
 </table>
 <form action="/session/<%=session.id%>?_method=PUT" method="POST" class="displayNone" id="editform">
