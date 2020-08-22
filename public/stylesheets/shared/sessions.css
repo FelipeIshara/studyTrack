@@ -1,0 +1,50 @@
+div.studySession{
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    align-items: center;
+   
+}
+
+.studySession h2{
+    margin-bottom: 40px;
+    font-size: 3rem;
+}
+
+table {
+    border: 1px black solid;
+    border-collapse: collapse;
+    width: 100vw;
+    max-width: 800px;
+  }
+  
+th, td {
+    text-align: center;
+    padding: 8px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+  
+tr:nth-child(even){
+      background-color: #b1a9a9d0
+}
+  
+th {
+    background-color: #000000;
+    color: white;
+}
+
+.displayNone{
+    display: none;
+}
+/*this class is activated by a buttom*/
+.formClass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: ;
+    height: 40vh;
+}
+.formClass h2{
+    margin: 30px auto;
+}

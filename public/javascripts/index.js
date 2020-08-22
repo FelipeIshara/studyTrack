@@ -117,18 +117,5 @@ function countdown(){
         setIntervalStatus(false);
         alert("alarm");
         startBtn.disabled = false;
-        endSession()
     }
 }
-
-function endSession(){
-    endSessionBtn.disabled=false;
-    const form = document.querySelector(".displayNone")
-    form.style.display = "block";
-}
-
-endSessionBtn.onclick = function(){
-    console.log("i fell your click bro")
-    const form = document.querySelector(".displayNone")
-    form.style.display = "none";
-} 

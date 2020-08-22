@@ -13,7 +13,7 @@ router.post('/', checkAuthenticated, async (req, res) => {
       subject: req.body.subject
     }) 
     await session.save()
-    return res.redirect('/')
+    return res.redirect('/session')
   } catch{
       res.send("we had a problem saving your session")
     }  
@@ -24,6 +24,9 @@ try {
   const studySessions = await StudySession.find({ userId: req.user.id})
   res.render('session.ejs', {sessions: studySessions})
 } catch { res.redirect('/')}
+})
+router.get('/new', checkAuthenticated, async (req, res) => {
+  res.render('create.ejs')
 })
 
 //show studySession page

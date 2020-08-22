@@ -1,25 +1,15 @@
 @import 'shared/login.css';
+@import 'shared/header.css';
+@import 'shared/sessions.css';
+@import 'shared/pomodoro.css';
 
+/*:root{
+   border-bottom: 1px solid black;
+}   background: linear-gradient(to right, rgb(182, 0, 0), rgba(48, 1, 1, 0.932) );
+}*/
 *{
     padding: 0;
     box-sizing: border-box;
     margin: 0;
-}
-
-
-.displayNone{
-    display: none;
-}
-.displaySessions{
-    display:flex;
-}
-
-.sessionTable{
-    text-align: center;
-}
-
-.sessionTable tr td{
-    padding: 10px;
-    border-bottom: 1px solid black;
 }
 

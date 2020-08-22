@@ -3,27 +3,30 @@
         <th>Date</th>
         <th>Minutes</th>
         <th>Subject</th>
-        <th>Description</th> 
         <th>Edit</th>
         <th>Delete</th>
     </tr>
-    
-        <tr>
-            <td><%= session.sessionDate.toISOString().split('T')[0] %></td>
-            <td><%= session.minutes %></td>
-            <td style="white-space: pre-line"><%=session.description%></td> 
-            <td><%= session.subject %></td>
-            <td><button id="editsessionbtn">Edit</button></td>
-            <td>
-                <form action="/session/<%=session.id%>?_method=DELETE" method="POST" id="editform">
+    <tr>
+        <td><%= session.sessionDate.toISOString().split('T')[0] %></td>
+        <td><%= session.minutes %></td>
+        <td><%= session.subject %></td>
+        <td><button id="editsessionbtn">Edit</button></td>
+        <td>
+            <form action="/session/<%=session.id%>?_method=DELETE" method="POST" id="editform">
                 <button type="submit">Delete</button></td>
-                </form>
-            </td>
-        </tr>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <th colspan="5">Description</th>
+    </tr>
+    <tr>
+        <td colspan="5" style="white-space: pre-line"><%=session.description%></td> 
+    </tr>
 </table>
-<form action="/session/<%=session.id%>?_method=PUT" method="POST" class="displayNone" id="editform">
-    <h2>Edit your last session</h2>
-    <br>
+<form action="/session/<%=session.id%>?_method=PUT" method="POST" class="displayNone" id="editform1">
+    <h2>Edit this session</h2>
+        <div class="editformdiv">
         <div><label for="min" >Minutes</label><input name="min" type="number" value="<%= session.minutes %>"></div>
         <div><label for="subject"></label>Subject<input name="subject" type="text" value="<%= session.subject %>"></div>
         <div><label for="description">Description</label><textarea name="description" value="<%= session.description %>"><%= session.description %></textarea></div>
