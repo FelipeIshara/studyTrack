@@ -24,12 +24,17 @@
         <td colspan="5" style="white-space: pre-line"><%=session.description%></td> 
     </tr>
 </table>
-<form action="/session/<%=session.id%>?_method=PUT" method="POST" class="displayNone" id="editform1">
-    <h2>Edit this session</h2>
+<form action="/session/<%=session.id%>?_method=PUT" method="POST" class="formClass" id="editform1">
+        <h2>Edit this session</h2>
         <div class="editformdiv">
-        <div><label for="min" >Minutes</label><input name="min" type="number" value="<%= session.minutes %>"></div>
-        <div><label for="subject"></label>Subject<input name="subject" type="text" value="<%= session.subject %>"></div>
-        <div><label for="description">Description</label><textarea name="description" value="<%= session.description %>"><%= session.description %></textarea></div>
-        <button type="submit">Save session</button>
-    </div>
+            <div class="edit-form-label"><label for="min" >Minutes:</label></div>
+            <input name="min" type="number" value="<%= session.minutes %>">
+            <div class="edit-form-label"><label for="subject">Subject:</label></div>
+            <input name="subject" type="text" value="<%= session.subject %>">
+            <div class="edit-form-label"><label for="description">Description:</label></div>
+            <textarea name="description" value="<%= session.description %>"><%= session.description %></textarea>
+            <div class="edit-form-label"></div>
+            <button class="saveEditBtn" type="submit">Save Changes</button>
+        </div>
+        
 </form>
