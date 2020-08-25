@@ -27,7 +27,7 @@ div.interface{
 
 .session{
     display: flex;
-    width: 100%;
+    width: 150%;
 }
 
 .sessionBtn{
@@ -35,17 +35,11 @@ div.interface{
     height: 3rem;
     background-color: inherit;
     font-weight: bolder;
-    color: black;
+    color: var(--color-text-light);
     font-size: 1.2rem;
-    border: solid 2px black;
     cursor: pointer;
 }
-.sessionBtn:first-child{
-    background-color: inherit;
-}
-.sessionBtn:last-child{
-    background-color: inherit;
-}
+
 
 .block{
     width: 100%;
@@ -73,7 +67,7 @@ div.interface{
     cursor: pointer;
     font-weight: bolder;
     font-size: 1.5rem;
-    color: black;
+    color: var(--color-text-light);
     border: none;
     background-color: rgb(111, 148, 150);
     
@@ -107,7 +101,7 @@ div.interface{
 
 .settings{
     display: flex;
-    width: 100%;
+    width: 1000%;
     justify-content: center;
 }
 .settingField{

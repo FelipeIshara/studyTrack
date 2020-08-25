@@ -1,21 +1,15 @@
+<h2> Session Details </h2>
 <table class="sessionTable">
     <tr>
         <th>Date</th>
         <th>Minutes</th>
         <th>Subject</th>
-        <th>Edit</th>
-        <th>Delete</th>
+        
     </tr>
     <tr>
         <td><%= session.sessionDate.toISOString().split('T')[0] %></td>
         <td><%= session.minutes %></td>
         <td><%= session.subject %></td>
-        <td><button id="editsessionbtn">Edit</button></td>
-        <td>
-            <form action="/session/<%=session.id%>?_method=DELETE" method="POST" id="editform">
-                <button type="submit">Delete</button></td>
-            </form>
-        </td>
     </tr>
     <tr>
         <th colspan="5">Description</th>
@@ -24,6 +18,11 @@
         <td colspan="5" style="white-space: pre-line"><%=session.description%></td> 
     </tr>
 </table>
+<button id="editsessionbtn">Edit</button></td>
+        
+            <form action="/session/<%=session.id%>?_method=DELETE" method="POST" id="editform">
+                <button type="submit">Delete</button></td>
+            </form>
 <form action="/session/<%=session.id%>?_method=PUT" method="POST" class="formClass" id="editform1">
         <h2>Edit this session</h2>
         <div class="editformdiv">
