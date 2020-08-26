@@ -19,12 +19,12 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin: 50px auto;
-    height: 55vh;
+    margin: 5rem auto;
+    height: 60vh;
     width: 50vw;
     max-width: 400px;
     min-width: 300px;
-    max-height: 500px;
+    max-height: 550px;
     min-height: 400px;
     box-shadow: black 3px 3px;
     border-radius: 5px;
@@ -34,13 +34,14 @@
 }
 .loginForm h2{
     font-size: 2rem;
+    margin-bottom: 0px;
 }
 
 
 .inputField{
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .inputField label{
     align-self: flex-start;
@@ -56,6 +57,9 @@
     border: 1.5px black solid;
     font-size: 1.2rem;
 }
+.inputs:focus{
+    box-shadow: 0 0 3pt 2pt var(--color-text-hover)}
+
 .loginBtn button{
     height: 2rem;
     width: 6rem;
@@ -66,11 +70,17 @@
     font-size: 1.1rem;
     font-weight: bold;
     color: var(--color-text-light);
+    cursor: pointer;
 }
+.loginBtn button:hover{
+    color: var(--color-text-hover);
+}
+
 .registerbtn{
     align-self: flex-end;
     font-size: 1.0rem;
     padding-bottom: 15px;
+    padding-right: 30px;
    
 }
 .registerbtn a{
