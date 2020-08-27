@@ -6,7 +6,7 @@ const authenticateFunctions = require("../authenticate-function")
 const checkNotAuthenticated = authenticateFunctions.checkNotAuthenticated
 
 router.get('/', checkNotAuthenticated, (req,res)=>{
-    res.render('register')
+    res.render('register', {layout: "layouts/layoutb"})
 })
 
 //requisição de registro

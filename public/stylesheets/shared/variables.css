@@ -7,8 +7,8 @@
     --color-background-light: hsl(var(--color-base-hue), 100%, 16%);
     --color-text-light: hsl(var(--color-base-hue), 100%, 87%);
     --title-font-size: 2rem;
-    --color-text-hover: hsl(var(--color-base-hue), 100%, 50%)
-
+    --color-text-hover: hsl(var(--color-base-hue), 100%, 50%);
+    --border-color: hsl(var(--color-base-hue), 50%, 80%);
     
     
 }

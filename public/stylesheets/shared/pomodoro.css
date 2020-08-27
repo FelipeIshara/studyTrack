@@ -27,16 +27,23 @@ div.interface{
 .session{
     display: flex;
     width: 150%;
+    
 }
 
 .sessionBtn{
     flex: 1;
     height: 3rem;
     background-color: inherit;
-    font-weight: bolder;
+    font-weight: bold;
     color: var(--color-text-light);
     font-size: 1.2rem;
     cursor: pointer;
+    border: 0.2rem solid var(--border-color);
+}
+.sessionBtn:hover{
+    color: var(--color-text-hover);
+    border: var(--color-text-hover) solid 0.2rem;
+
 }
 
 
@@ -51,14 +58,14 @@ div.interface{
     display: flex;
     width: 100%;
     justify-content: center;
-    margin: 10px auto;
+    margin: auto auto;
     align-items: center;
     justify-content: space-evenly;
-    padding: auto;
-    margin-bottom: 20px;
+    padding: 0.2rem;
+    margin-bottom: 1rem;
     margin-top: 0;
-    border-top: solid 1px black;
-    border-bottom: solid 1px black;
+    border-top: solid 0.2rem var(--border-color);
+    border-bottom: solid 0.2rem var(--border-color);
 }
 
 
@@ -68,34 +75,40 @@ div.interface{
     font-size: 1.5rem;
     color: var(--color-text-light);
     border: none;
-    background-color: rgb(111, 148, 150);
+    background-color: inherit;
+
     
 }
 .btn:hover{
-    background-color: rgb(74, 99, 100);
+    color: var(--color-text-hover)
 }
 
 
 .clock p{
-    margin-top: 1rem;
-    margin-bottom: 0;
+    display: flex;
+    flex: 1;
 }
 
 .clock{
     display: flex;
     text-align: center;
-    border: rgba(5, 5, 5, 0.849) 8px solid;
-    background-color: rgb(111, 148, 150);
-    height: 9rem;
-    width: 17rem;
+    border: var(--border-color) 0.5rem solid;
+    height: 20vh;
+    width: 30vw;
+    min-width: 300px;
+    min-height: 200px;
+    max-width: 300px;
+    max-height: 300px;
     align-items: center;
     justify-content: center;
     font-weight: bolder;
     font-size: 4rem;
-    padding: 50px 25px;
+    padding: 2rem 1rem;
     box-shadow: 8px 4px 4px black;
     border-radius: 10px;
     flex-direction: column;
+    flex: 1;
+    margin: 1rem;
 }
 
 .settings{
@@ -116,10 +129,14 @@ div.interface{
     text-align: center;
     width: 30%;
     border-radius: 5px;
-    color:black;
+    color: var(--color-text-light);
     background-color: inherit;
     height: 2rem;
     font-weight: bold;
-    border: black solid;
+    border: var(--border-color) solid;
     text-decoration: none;
 }
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }

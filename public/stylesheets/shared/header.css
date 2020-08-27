@@ -7,9 +7,15 @@ header{
     padding: 10px;
     
 }
-header h1{
+header h1 a{
     margin-left: 1rem;
     font-weight: bolder;
+    text-decoration: none;
+    color: var(--color-text-light);
+}
+header h1 a:hover{
+    color: var(--color-text-hover);
+    font-weight: 900;
 }
 .header-nav{
     align-self: flex-end;
@@ -32,6 +38,7 @@ header h1{
     color: var(--color-text-light);
 }
 .header-nav ul li a:hover{
-    background-color: darkgray;
+    color: var(--color-text-hover);
+    font-weight: 900;
 }
 
