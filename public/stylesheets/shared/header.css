@@ -42,3 +42,15 @@ header h1 a:hover{
     font-weight: 900;
 }
 
+.logoutBtn{
+    background-color: inherit;
+    color: var(--color-text-light);
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.logoutBtn:hover{
+    color: red;
+}
+

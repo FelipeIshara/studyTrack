@@ -12,7 +12,9 @@ div.interface{
     height: 80vh;
     width: 90vw;
     max-width: 500px;
+    max-height: 900px;
     margin: auto;
+    flex: 1;
 }
 .title h1{
     text-align: center;
@@ -26,7 +28,8 @@ div.interface{
 
 .session{
     display: flex;
-    width: 150%;
+    width: 130%;
+    flex: 1;
     
 }
 
@@ -66,6 +69,7 @@ div.interface{
     margin-top: 0;
     border-top: solid 0.2rem var(--border-color);
     border-bottom: solid 0.2rem var(--border-color);
+    flex: 1;
 }
 
 
@@ -98,7 +102,7 @@ div.interface{
     min-width: 300px;
     min-height: 200px;
     max-width: 300px;
-    max-height: 300px;
+    max-height: 250px;
     align-items: center;
     justify-content: center;
     font-weight: bolder;
@@ -113,8 +117,9 @@ div.interface{
 
 .settings{
     display: flex;
-    width: 1000%;
+    width: 150%;
     justify-content: center;
+    flex: 1;
 }
 .settingField{
     display: flex;
@@ -122,10 +127,11 @@ div.interface{
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    flex: 1;
 }
 
 .settings input{
-    margin: 3px;
+    margin: 1rem;
     text-align: center;
     width: 30%;
     border-radius: 5px;
@@ -135,8 +141,15 @@ div.interface{
     font-weight: bold;
     border: var(--border-color) solid;
     text-decoration: none;
+    font-size: 1rem;
 }
 
+/*configuração para remover arrows*/
 input[type=number] {
     -moz-appearance: textfield;
+  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
