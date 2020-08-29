@@ -3,70 +3,46 @@ div.studySession{
     flex-direction: column;
     margin: 50px auto;
     align-items: center;
-   
+    width: 100vw;
+    justify-content: center;
 }
 
 .studySession h2{
     margin-bottom: 40px;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
-table {
-    border: 1px black solid;
+/*Table style*/
+.sessionTable {
+    border: 1px var(--border-color) solid;
     border-collapse: collapse;
     width: 100vw;
     max-width: 800px;
   }
   
-th, td {
+.sessionTable th,  .sessionTable td {
     text-align: center;
     padding: 8px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-decoration: none;
-}
-  
-tr:nth-child(even){
-      background-color: #b1a9a9d0
-}
-  
-th {
-    background-color: #000000;
-    color: white;
+    border: 0.2rem solid var(--border-color);
 }
 
-.displayNone{
-    display: flex;
+.sessionTable td a{
+    
+    cursor: pointer;
+    color: var(--color-text-light);
+    font-weight: 500;
 }
-/*this class is activated by a buttom*/
-.formClass{
-    display: flex;
-    flex-direction: column; 
-   
-}
-.formClass h2{
-    margin: 30px auto;
-}
-.edit-form-label{
-    font-size: 1.2rem;
-    align-self: flex-start;
-}
-.editformdiv{
-    display: grid;
-    align-content: flex-start;
-    align-items: center;
-    justify-content: center;
-    grid-gap: 1.0rem;
-    grid-template-columns: auto auto;
-}
-.saveEditBtn{
-    align-self: flex-end;
+.sessionTable td a:hover{
+    color: var(--color-text-hover)
 }
 
-.sessionTable{
-    margin: 50px auto;
+  
+.sessionTable th {
+    background-color: inherit;
+    color: var(--color-text-hover);
+    font-weight: 900;
+    border-collapse: collapse;
 }
-h2{
-    text-align: center;
-    font-size: 2rem;
-    margin: 30px;
-}
+

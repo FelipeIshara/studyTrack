@@ -33,7 +33,7 @@ router.get('/new', checkAuthenticated, async (req, res) => {
 router.get('/:id', async (req, res)=>{
   try {
     const studySession = await StudySession.findById(req.params.id)
-    res.render('show', {session: studySession})
+    res.render('details.ejs', {session: studySession})
   } catch{
     res.redirect('/')
   }

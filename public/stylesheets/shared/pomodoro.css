@@ -16,24 +16,25 @@ div.interface{
     margin: auto;
     flex: 1;
 }
-.title h1{
-    text-align: center;
+.title h2{
+    font-size: var(--title-font-size);
 }
-.title h1::after{
+.title h2::after{
     content: "";
-    width: 1px;
+    width: 10px;
     background-color: black;
     height: 1px;
 }
 
 .session{
     display: flex;
-    width: 130%;
+    width: 145%;
     flex: 1;
     
 }
 
 .sessionBtn{
+    margin: 2rem;
     flex: 1;
     height: 3rem;
     background-color: inherit;
@@ -96,12 +97,12 @@ div.interface{
 .clock{
     display: flex;
     text-align: center;
-    border: var(--border-color) 0.5rem solid;
+    border: var(--border-color) 0.4rem solid;
     height: 20vh;
-    width: 30vw;
+    width: 50vw;
     min-width: 300px;
     min-height: 200px;
-    max-width: 300px;
+    max-width: 500px;
     max-height: 250px;
     align-items: center;
     justify-content: center;

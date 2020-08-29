@@ -3,6 +3,8 @@
 @import 'shared/header.css';
 @import 'shared/sessions.css';
 @import 'shared/pomodoro.css';
+@import 'shared/create.css';
+@import 'shared/details.css';
 
 :root {
     font-size: 20px;

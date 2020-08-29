@@ -1,0 +1,110 @@
+.details-iterface{
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    align-items: center;
+    width: 100vw;
+    justify-content: center;
+}
+
+.detailsAndBtns-box{
+    width: 90vw;
+    border: 1px solid yllow;
+}
+.detailsTable{
+    display: grid;
+}
+.detailsLabels{
+    font-size: 1.5rem;
+    text-align: start;
+    padding: 5px;
+}
+.detailsValues{
+    padding: 5px;
+}
+
+
+.edit-delete-btn-box{
+    display: flex;
+    justify-content: center;
+    margin-right: 40px;
+}
+
+
+
+
+/*Buttons Session Config*/
+.details-btns{
+    margin: 40px 0px;
+    border: 1px solid var(--color-text-light);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    width: auto;
+    height: auto;
+    color: var(--color-text-light);
+    background-color: inherit;
+    padding: 3px 8px;
+    margin-left: 10px;
+}
+.details-btns:hover{
+    color: var(--color-text-hover);
+    border: 1px solid var(--color-text-hover);
+}
+.delete{
+    color: hsl(20 100% 65%);
+    border: 1px solid hsl(20 100% 65%);;
+}
+.delete:hover{
+    color: hsl(20 100% 50%);
+    border: 1px solid hsl(20 100% 50%);;
+
+}
+
+
+
+
+
+
+
+
+
+.displayNone{
+    display: none;
+}
+/*this class is activated by a buttom*/
+.formClass{
+    display: flex;
+    flex-direction: column; 
+   
+}
+.formClass h2{
+    margin: 30px auto;
+    font-size: 2rem;
+}
+.edit-form-label{
+    font-size: 1.5rem;
+    align-self: flex-start;
+}
+.editformdiv{
+    display: grid;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 1.0rem;
+    grid-template-columns: auto auto;
+}
+.saveEditBtn{
+    align-self: flex-end;
+}
+
+.sessionTable{
+    margin: 50px auto;
+}
+h2{
+    text-align: center;
+    font-size: 2rem;
+    margin: 50px;
+}

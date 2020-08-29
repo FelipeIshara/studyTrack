@@ -6,10 +6,11 @@
         <th>Minutes</th>
         <!-- <th>Description</th> -->
         <th>Subject</th>
-        <th>Show study session</th>
+        <th>Details</th>
         
     </tr>
     <% sessions.forEach(session => { %>
+        
         <tr>
             <td><%= session.sessionDate.toISOString().split('T')[0] %></td>
             <td><%= session.minutes %></td>

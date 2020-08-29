@@ -1,0 +1,46 @@
+<div class="details-iterface">
+    <h2> Session Details </h2>
+    <div class="detailsAndBtns-box">
+       <div class="detailsTable">
+            <table>
+                <tr>
+                    <th class="detailsLabels">Date</th>
+                    <th class="detailsLabels">Minutes</th>
+                    <th class="detailsLabels">Subject</th>
+                </tr>
+                <tr>
+                    <td class="detailsValues"><%= session.sessionDate.toISOString().split('T')[0] %></td>
+                    <td class="detailsValues"><%= session.minutes %></td>
+                    <td class="detailsValues"><%= session.subject %></td>
+                </tr>
+                <tr>
+                    <th class="detailsLabels description" colspan="5">Description</th>
+                </tr>
+                <tr>
+                    <td class="detailsValues" colspan="5" style="white-space: pre-line"><%=session.description%></td> 
+                </tr>
+            </table>
+        </div>
+        <div class="edit-delete-btn-box">
+            <div>
+            <button class="details-btns" id="editsessionbtn">Edit</button>
+            </div>
+            <form action="/session/<%=session.id%>?_method=DELETE" method="POST" id="editform">
+                <button class="details-btns delete" type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+    <form action="/session/<%=session.id%>?_method=PUT" method="POST" class="displayNone" id="editform1">
+            <h2>Edit this session</h2>
+            <div class="labels-inputs">
+                <div class="save-label"><label for="min" >Minutes:</label></div>
+                <input name="min" type="number" value="<%= session.minutes %>">
+                <div class="save-label"><label for="subject">Subject:</label></div>
+                <input name="subject" type="text" value="<%= session.subject %>">
+                <div class="save-label"><label for="description">Description:</label></div>
+                <textarea name="description"><%= session.description %></textarea>
+                <div class="save-label"></div>
+                <div class="btn-flexbox"><button id="saveSessionBtn">Save</button></div>
+            </div>
+    </form>
+</div>
