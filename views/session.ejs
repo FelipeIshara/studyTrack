@@ -1,5 +1,9 @@
 <div class="studySession">
 <h2>Study Sessions</h2>
+<% console.log(sessions[0]) %>
+<% if(sessions[0] == undefined){ %>
+    You dont save any Sessions
+<%}  else {%>
 <table class="sessionTable">
     <tr>
         <th>Date</th>
@@ -22,3 +26,4 @@
     <% }) %>
 </table>
 </div>
+<% }%>

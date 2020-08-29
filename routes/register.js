@@ -17,6 +17,11 @@ router.post('/', checkNotAuthenticated, async (req,res)=>{
     const userAlreadyExist = await User.find({ username: req.body.username })
     if(userAlreadyExist != ''){
       return res.send("este usuário já existe")
+    }
+  
+    if(req.body.password !== req.body.confirmPassword){
+     
+      return res.send("Senhas Incompatíveis")
     } 
     //hashing password
     hashPassword = await bcrypt.hash(req.body.password, 10)
