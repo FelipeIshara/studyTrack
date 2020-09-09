@@ -1,6 +1,22 @@
 <div class="studySession">
 <h2>Study Sessions</h2>
-<% console.log(sessions[0]) %>
+<div>
+    <form action="/session" method="GET">
+        <div>
+            <label for="subject">Subject:</label>
+            <input name="subject" type="text">
+        </div>
+        <div>
+            <label for="after">After:</label>
+            <input name="after" type="date">
+        </div>
+        <div>
+            <label for="before">Before:</label>
+            <input name="before" type="date">
+        </div>
+        <button type="submit">Search</button>
+    </form>
+</div>
 <% if(sessions[0] == undefined){ %>
     You dont save any Sessions
 <%}  else {%>

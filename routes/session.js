@@ -20,8 +20,20 @@ router.post('/', checkAuthenticated, async (req, res) => {
 })
 //Show list of studySessions
 router.get('/', checkAuthenticated, async (req, res) => {
+let query = StudySession.find({userId: req.user.id})
+/*Subject Filter*/
+if (req.query.subject != null && req.query.subject != ''){
+  query = query.regex('subject', new RegExp(req.query.subject, 'i'))
+}
+/*After Date Filter*/ 
+if (req.query.after != null && req.query.after != ''){
+  query = query.gte('sessionDate', req.query.after)
+}
+if (req.query.before != null && req.query.before != ''){
+  query = query.lte('sessionDate', req.query.before)
+}
 try {
-  const studySessions = await StudySession.find({ userId: req.user.id})
+  const studySessions = await query.exec()
   res.render('session.ejs', {sessions: studySessions})
 } catch { res.redirect('/')}
 })
