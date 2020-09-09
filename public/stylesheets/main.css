@@ -5,6 +5,8 @@
 @import 'shared/pomodoro.css';
 @import 'shared/create.css';
 @import 'shared/details.css';
+@import 'shared/forms.css';
+
 
 :root {
     font-size: 20px;

@@ -1,26 +1,29 @@
-<div class="studySession">
+<div class="form-session-interface">
 <h2>Study Sessions</h2>
 <div>
     <form action="/session" method="GET">
-        <div>
-            <label for="subject">Subject:</label>
-            <input name="subject" type="text">
+        <div class="labelsAndinputs">
+            
+                <div class="form-label"><label for="subject">Subject:</label></div>
+                <input name="subject" type="text">
+            
+            
+                <div class="form-label"><label for="after">After:</label></div>
+                <input name="after" type="date">
+            
+            
+                <div class="form-label"><label for="before">Before:</label></div>
+                <input name="before" type="date">
+                <div class="form-label"></div>
+                <button type="submit"><a href="#sessionTable">Search</a></button>
         </div>
-        <div>
-            <label for="after">After:</label>
-            <input name="after" type="date">
-        </div>
-        <div>
-            <label for="before">Before:</label>
-            <input name="before" type="date">
-        </div>
-        <button type="submit">Search</button>
+        
     </form>
 </div>
 <% if(sessions[0] == undefined){ %>
     You dont save any Sessions
 <%}  else {%>
-<table class="sessionTable">
+<table class="sessionTable" id="sessionTable">
     <tr>
         <th>Date</th>
         <th>Minutes</th>

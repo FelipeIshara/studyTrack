@@ -1,14 +1,14 @@
-<div class="save-session-interface">
+<div class="form-session-interface">
     <h2>Save your study session</h2>
     <form action='/session' method="POST">
-        <div class="labels-inputs">
-            <div class="save-label"><label for="min" >Minutes:</label></div>
+        <div class="labelsAndinputs">
+            <div class="form-label"><label for="min" >Minutes:</label></div>
             <input name="min" type="number">
-            <div class="save-label"><label for="subject">Subject:</label></div>
+            <div class="form-label"><label for="subject">Subject:</label></div>
             <input name="subject" type="text">
-            <div class="save-label"><label for="description">Description:</label></div>
-            <textarea name="description"></textarea>
-            <div class="save-label"></div>
+            <div class="form-label"><label for="description">Description:</label></div>
+            <div><textarea name="description"></textarea></div>
+            <div class="form-label"></div>
             <div class="btn-flexbox"><button id="saveSessionBtn">Save</button></div>
         </div>
         
