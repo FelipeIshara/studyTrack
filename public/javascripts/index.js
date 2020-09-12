@@ -9,8 +9,10 @@ const shortBreakBtn = document.querySelector("#shortBreak")
 const longBreakBtn = document.querySelector("#longBreak")
 const startingMin = document.getElementById("startingMin")
 const endSessionBtn = document.getElementById("endSessionBtn")
-
 let sessionType = "pomodoro";
+
+var audio = new Audio("../schoolBell.mp3")
+
 
 //covert time
 
@@ -115,7 +117,9 @@ function countdown(){
         formatTime()
     } else {
         setIntervalStatus(false);
-        alert("alarm");
+        audio.play();
+        alert("alassrm");
+        audio.pause()
         startBtn.disabled = false;
     }
 }
