@@ -11,20 +11,27 @@ h1{
     margin-top: 0px;
 }
 
-.loginForm{
-    border: 1px solid;
-    height: 480px;
-    width: 400px;
+.authForm{
+    border: 1px solid var(--color-text-light);
+    height: 420px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    box-shadow: 0 0 3pt 1px var(--color-text-light);
+    border-radius: 15px;
 }
-.loginForm h2{
+.registerForm{
+    height: 500px;
+    width: 400px;
+}
+
+.authForm h2{
     font-size: 2rem;
     box-sizing: border-box;
-    margin: 40px auto 0px;
+    margin: 40px auto 10px;
 
 }
 .formInterface{
@@ -37,10 +44,11 @@ h1{
 
 }
 
+
 .inputField{
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .inputField label{
     align-self: flex-start;
@@ -60,20 +68,22 @@ h1{
     box-shadow: 0 0 3pt 2pt var(--color-text-hover)}
 
 .loginBtn button{
-    height: 2rem;
-    width: 6rem;
+    padding: 10px 20px;
     border-radius: 2px;
-    border: 1px black solid;
+    border: 1px var(--color-text-light) solid;
     background-color: inherit;
     box-shadow: 1px 1px black;
     font-size: 1.1rem;
     font-weight: bold;
     color: var(--color-text-light);
     cursor: pointer;
+    margin-top: 15px;
     
 }
 .loginBtn button:hover{
     color: var(--color-text-hover);
+    border: 1px var(--color-text-hover) solid;
+    box-shadow: 1px 1px var(--color-text-hover);
 }
 
 .registerbtn{
@@ -93,4 +103,8 @@ h1{
 }
 .registerbtn a:hover{
     color: var(--color-text-hover)
+}
+
+.registerInterface{
+    border: 1px solid black;
 }
