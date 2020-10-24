@@ -9,10 +9,9 @@ div.interface{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 70vh;
-    width: 90vw;
-    max-width: 700px;
-    max-height: 900px;
+    width: 670px;
+    height: 550px;
+    
     margin: auto;
     flex: 1;
 }
@@ -28,21 +27,22 @@ div.interface{
 
 .session{
     display: flex;
-    width: 145%;
+    width: 100%;
     flex: 1;
+    justify-content: center;
     
 }
 
 .sessionBtn{
-    margin: 2rem;
-    flex: 1;
-    height: 3rem;
+    width: 15rem;
+    height: 4rem;
     background-color: inherit;
     font-weight: bold;
     color: var(--color-text-light);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     cursor: pointer;
     border: 0.2rem solid var(--border-color);
+    margin: 10px;
 }
 .sessionBtn:hover{
     color: var(--color-text-hover);
@@ -51,13 +51,7 @@ div.interface{
 }
 
 
-.block{
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    
-}
+
 .buttons{
     display: flex;
     width: 100%;
@@ -65,19 +59,17 @@ div.interface{
     margin: auto auto;
     align-items: center;
     justify-content: space-evenly;
-    padding: 0.2rem;
-    margin-bottom: 1rem;
-    margin-top: 0;
+    padding: 0.5rem;
+    margin-top: 1.2rem;
     border-top: solid 0.2rem var(--border-color);
     border-bottom: solid 0.2rem var(--border-color);
-    flex: 1;
 }
 
 
 .btn{
     cursor: pointer;
     font-weight: bolder;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--color-text-light);
     border: none;
     background-color: inherit;
@@ -89,37 +81,36 @@ div.interface{
 }
 
 
-.clock p{
-    display: flex;
-    flex: 1;
-}
+
 
 .clock{
     display: flex;
+    flex-direction: column;
     text-align: center;
-    border: var(--border-color) 0.4rem solid;
-    height: 15vh;
-    width: 35vw;
-    max-width: 500px;
+    border: var(--border-color) 0.3rem solid;
+    justify-content: space-between;
+    width: 350px;
+   
     /*min-width: 300px;
     min-height: 200px;
     
     max-height: 250px;*/
     align-items: center;
-    justify-content: center;
+    
     font-weight: bolder;
-    font-size: 4rem;
-    padding: 2rem 1rem;
-    box-shadow: 8px 4px 4px black;
+    font-size: 5.5rem;
+    padding: 2.5rem 3rem;
+    box-shadow: 6px 6px 4px black;
     border-radius: 10px;
-    flex-direction: column;
-    flex: 1;
-    margin: 1rem;
+   
+    
+    margin: 2rem;
+    
 }
 
 .settings{
     display: flex;
-    width: 150%;
+    width: 100%;
     justify-content: center;
     flex: 1;
 }
@@ -130,12 +121,13 @@ div.interface{
     align-items: center;
     font-weight: bold;
     flex: 1;
+    font-size: 1.3rem;
 }
 
 .settings input{
     margin: 1rem;
     text-align: center;
-    width: 30%;
+    width: 60px;
     border-radius: 5px;
     color: var(--color-text-light);
     background-color: inherit;
@@ -143,7 +135,8 @@ div.interface{
     font-weight: bold;
     border: var(--border-color) solid;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    padding: 15px 0px;
 }
 
 /*configuração para remover arrows*/
