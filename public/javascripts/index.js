@@ -118,7 +118,7 @@ function countdown(){
     } else {
         setIntervalStatus(false);
         audio.play();
-        alert("alassrm");
+        alert("alarm");
         audio.pause()
         startBtn.disabled = false;
     }

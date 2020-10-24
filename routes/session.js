@@ -20,7 +20,8 @@ router.post('/', checkAuthenticated, async (req, res) => {
 })
 //Show list of studySessions
 router.get('/', checkAuthenticated, async (req, res) => {
-let query = StudySession.find({userId: req.user.id})
+/*DEfalt show: last 10 sessions*/  
+let query = StudySession.find({userId: req.user.id}).limit(10).sort('-sessionDate')
 /*Subject Filter*/
 if (req.query.subject != null && req.query.subject != ''){
   query = query.regex('subject', new RegExp(req.query.subject, 'i'))
