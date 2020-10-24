@@ -1,4 +1,3 @@
-
 .interfacelogin{
     height: 100vh;
     width: 100vw;
@@ -7,44 +6,46 @@
     align-items: center;
     justify-content: center;
 }
-.interface h1{
-    align-self: center;
-    font-size: 4rem;
+h1{
+    align-self: flex-start;
+    margin-top: 0px;
 }
+
 .loginForm{
-    flex: 1;
+    border: 1px solid;
+    height: 480px;
+    width: 400px;
     display: flex;
     flex-direction: column;
-    /*background-color: cornsilk;*/
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     text-align: center;
-    margin: 5rem auto;
-    height: 60vh;
-    width: 40vw;
-    
-    
-    box-shadow: black 3px 3px;
-    border-radius: 5px;
-    color: var(--color-text-light);
-    border: 2px black solid;
-  
 }
 .loginForm h2{
     font-size: 2rem;
+    box-sizing: border-box;
+    margin: 40px auto 0px;
 
 }
+.formInterface{
+    height: 250px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
+}
 
 .inputField{
     display: flex;
     flex-direction: column;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 .inputField label{
     align-self: flex-start;
 }
-.inputs{
+.inputField > .inputs{
     border-radius: 5px;
     height: 5px;
     width: 30vw;
@@ -69,6 +70,7 @@
     font-weight: bold;
     color: var(--color-text-light);
     cursor: pointer;
+    
 }
 .loginBtn button:hover{
     color: var(--color-text-hover);

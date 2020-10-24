@@ -2,29 +2,28 @@
 <% if (messages.error){%>
   <%= messages.error %>
 <%}%>
-
+<h1>Welcome to StudyTrack</h1>
 <div class="interfacelogin">
-  <h1>Welcome to StudyTrack</h1>
-<div class="loginForm">
-  <div>
-    <h2>Login</h2>
+  <div class="loginForm">
+    
+      <h2>Login</h2>
+    
+    <form action="/login" method="POST" class="formInterface">
+      <div class="inputField">
+        <label for="username">Username</label>
+        <input class="inputs" type="text" id="username" name="username" required>
+      </div>
+      <div class="inputField">
+        <label for="password">Password</label>
+        <input class="inputs" type="password" id="password" name="password" required>
+      </div>
+      <div class="loginBtn">
+      <button id="loginBtn" type="submit">Login</button>
+      </div>
+    </form>
+    <div class="registerbtn">
+      <a href="/register">Register</a>
+    </div>
   </div>
-  <form action="/login" method="POST">
-    <div class="inputField">
-      <label for="username">Username</label>
-      <input class="inputs" type="text" id="username" name="username" required>
-    </div>
-    <div class="inputField">
-      <label for="password">Password</label>
-      <input class="inputs" type="password" id="password" name="password" required>
-    </div>
-    <div class="loginBtn">
-    <button id="loginBtn" type="submit">Login</button>
-    </div>
-  </form>
-  <div class="registerbtn">
-    <a href="/register">Register</a>
-  </div>
-</div>
 </div>
 
