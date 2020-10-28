@@ -27,14 +27,14 @@ div.interface{
 
 .session{
     display: flex;
-    width: 100%;
+    width: 105%;
     flex: 1;
     justify-content: center;
     
 }
 
 .sessionBtn{
-    width: 15rem;
+    width: 30%;
     height: 4rem;
     background-color: inherit;
     font-weight: bold;
@@ -42,7 +42,7 @@ div.interface{
     font-size: 1.4rem;
     cursor: pointer;
     border: 0.2rem solid var(--border-color);
-    margin: 10px;
+    margin: 0px 20px;
 }
 .sessionBtn:hover{
     color: var(--color-text-hover);
@@ -89,7 +89,7 @@ div.interface{
     text-align: center;
     border: var(--border-color) 0.3rem solid;
     justify-content: space-between;
-    width: 350px;
+    width: 420px;
    
     /*min-width: 300px;
     min-height: 200px;
