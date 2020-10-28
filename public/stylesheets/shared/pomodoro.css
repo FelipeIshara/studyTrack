@@ -17,13 +17,9 @@ div.interface{
 }
 .title h2{
     font-size: var(--title-font-size);
+    margin-bottom: 50px;
 }
-.title h2::after{
-    content: "";
-    width: 10px;
-    background-color: black;
-    height: 1px;
-}
+
 
 .session{
     display: flex;

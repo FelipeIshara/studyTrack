@@ -6,7 +6,9 @@
     width: 100vw;
     justify-content: center;
 }
-
+.details-iterface h2{
+    margin-bottom: 40px;
+}
 .detailsAndBtns-box{
     width: 90vw;
     border: 1px solid yllow;
@@ -15,12 +17,13 @@
     display: grid;
 }
 .detailsLabels{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-align: start;
     padding: 5px;
 }
 .detailsValues{
     padding: 5px;
+    font-size: 1.5rem;
 }
 
 
