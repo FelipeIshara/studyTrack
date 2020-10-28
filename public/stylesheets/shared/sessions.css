@@ -1,23 +1,17 @@
-div.studySession{
+.tableFlexbox{
     display: flex;
     flex-direction: column;
-    margin: 50px auto;
-    align-items: center;
-    width: 100vw;
-    justify-content: center;
+    justify-content: space-between;
+    
 }
 
-.studySession h2{
-    margin-bottom: 40px;
-    font-size: 2rem;
-}
 
 /*Table style*/
 .sessionTable {
-    border: 1px var(--border-color) solid;
+    
     border-collapse: collapse;
     width: 100vw;
-    max-width: 1100px;
+    max-width: 900px;
   }
   
 .sessionTable th,  .sessionTable td {
@@ -25,7 +19,7 @@ div.studySession{
     padding: 20px;
     font-size: 1.5rem;
     text-decoration: none;
-    border: 0.2rem solid var(--border-color);
+    
 }
 
 .sessionTable td a{

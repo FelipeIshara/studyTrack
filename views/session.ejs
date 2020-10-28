@@ -1,5 +1,5 @@
 <div class="form-session-interface">
-    <h2>Study Sessions</h2>
+    <h2>Search Sessions</h2>
     <div>
         <form action="/session" method="GET">
             <div class="labelsAndinputs">
@@ -22,26 +22,30 @@
     <% if(sessions[0] == undefined){ %>
         You dont save any Sessions
     <%}  else {%>
-    <table class="sessionTable" id="sessionTable">
-        <tr>
-            <th>Date</th>
-            <th>Minutes</th>
-            <!-- <th>Description</th> -->
-            <th>Subject</th>
-            <th>Details</th>
-            
-        </tr>
-        <% sessions.forEach(session => { %>
-            
+    
+    <div class="tableFlexbox">
+        <h2>Study Sessions</h2>
+        <table class="sessionTable" id="sessionTable">
             <tr>
-                <td><%= session.sessionDate.toISOString().split('T')[0] %></td>
-                <td><%= session.minutes %></td>
-                <!-- <td style="white-space: pre-line">/*session.description</td> -->
-                <td><%= session.subject %></td>
-                <td><a href="/session/<%=session.id%>">Show</a></td>
+                <th>Date</th>
+                <th>Minutes</th>
+                <!-- <th>Description</th> -->
+                <th>Subject</th>
+                <th>Details</th>
                 
             </tr>
-        <% }) %>
-    </table>
+            <% sessions.forEach(session => { %>
+                
+                <tr>
+                    <td><%= session.sessionDate.toISOString().split('T')[0] %></td>
+                    <td><%= session.minutes %></td>
+                    <!-- <td style="white-space: pre-line">/*session.description</td> -->
+                    <td><%= session.subject %></td>
+                    <td><a href="/session/<%=session.id%>">Show</a></td>
+                    
+                </tr>
+            <% }) %>
+        </table>
+    </div>
     <% }%>
 </div>
