@@ -19,10 +19,10 @@ function initializePassport(){
   }
   passport.use(new LocalStrategy(verifyCallback));
   passport.serializeUser((user,done) => done(null, user.id)) 
-  passport.deserializeUser((userId, done)=> done(null, user))
+  passport.deserializeUser((id, done) => {
+    User.findById(id, (err, user) => done(null, user)
+  )}
   
-}
-
-
+  )}
 
 module.exports = initializePassport;
