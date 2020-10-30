@@ -45,7 +45,7 @@ app.use(flash())
 app.use(session({
   secret: 'fuck',
   resave: true,
-  saveUninitialized: false,
+  saveUninitialized: true,
 }));
 
 //iniciando midlewares
