@@ -7,12 +7,12 @@
                     <div class="form-label"><label for="subject">Subject:</label></div>
                     <input name="subject" type="text">
                 
+                    <div class="form-label"><label for="before">Before:</label></div>
+                    <input name="before" type="date">
+
                     <div class="form-label"><label for="after">After:</label></div>
                     <input name="after" type="date">
                 
-                    <div class="form-label"><label for="before">Before:</label></div>
-                    <input name="before" type="date">
-                    
                     <div class="form-label"></div>
                     <div class="btn-flexbox"><button id="saveSessionBtn" type="submit">Search</button></div>
                     
@@ -20,7 +20,7 @@
         </form>
     </div>
     <% if(sessions[0] == undefined){ %>
-        You dont save any Sessions
+        You didn't save any Sessions
     <%}  else {%>
     
     <div class="tableFlexbox">
